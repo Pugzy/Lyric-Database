@@ -13,12 +13,19 @@ function doStuffToJSON( json ){
 		//alert ( json.artists[artist].name + " :: " + json.artists[artist].dir );
 		//Name used to update DIV
 		//dir used to populate DIV
-		var dir = "lyrics/" + json.artists[artist].dir +"/";
-		var songs = (json.artists[artist].songs);
-		for (song in songs){
-			var div = document.getElementById(json.artists[artist].name);
-			div.innerHTML = div.innerHTML + "<li>" + songs[song] + "</li>";
-		}
+		var dir = "https://github.com/TGRHavoc/Lyric-Database/tree/gh-pages/lyrics/" + json.artists[artist].dir +"/";
+		$.ajax({
+			url: dir,
+			dataType: "html",
+			success: function(data){
+				alert(data);
+			}
+		});
+		// var songs = (json.artists[artist].songs);
+		// for (song in songs){
+		// 	var div = document.getElementById(json.artists[artist].name);
+		// 	div.innerHTML = div.innerHTML + "<li>" + songs[song] + "</li>";
+		// }
 		// var outout = "";
 		// for ( lyric in lyricsFound ){
 		// 	outout += lyric;
