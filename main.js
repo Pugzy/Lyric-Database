@@ -17,6 +17,7 @@ function doStuffToJSON( json ){
 		var dir = "https://github.com/TGRHavoc/Lyric-Database/tree/gh-pages/lyrics/" + json.artists[artist].dir +"/";
 		alert(dir);
 		$.ajax({
+			crossDomain: true,
 			url: dir,
 			dataType: "html",
 			success: function(data){
