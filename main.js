@@ -9,7 +9,7 @@ var jqXHR = $.ajax({
 });
 
 function doStuffToJSON( json ){
-	for (var i=0; i< json.artists.size(); i++ ){
+	for (var i=0; i< json.artists.length ; i++ ){
 		alert (json.artists[i].name);
 	}
 }
