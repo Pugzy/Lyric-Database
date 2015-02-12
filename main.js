@@ -1,6 +1,7 @@
 var jqXHR = $.ajax({
 	url: "artists.json",
 	dataType: "text",
+	processData: false,
 	success: function(data){
 		var json = $.parseJSON(data);
 		alert (json.toString());
