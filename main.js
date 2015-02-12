@@ -14,7 +14,7 @@ function doStuffToJSON( json ){
 		//Name used to update DIV
 		//dir used to populate DIV
 		var dir = "lyrics/" + json.artists[artist].dir +"/";
-		var songs = json.artists[artist].songs;
+		 alert (json.artists[artist].songs);
 		for (song in songs){
 			alert (song);
 		}
