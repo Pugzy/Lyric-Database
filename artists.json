@@ -4,14 +4,16 @@
       "name" : "Katy Perry",
       "dir" : "katy",
       "songs": [
-          "Roar"
+          "Roar",
+          "Another Song"
         ]
     },
     {
       "name" : "Taylor Swift",
       "dir" : "swift",
       "songs" : [
-          "Test"
+          "Test",
+          "Test2"
         ]
     }
     ]
