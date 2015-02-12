@@ -10,20 +10,20 @@ var jqXHR = $.ajax({
 
 function doStuffToJSON( json ){
 	for (artist in json.artists){ // 0 - amount of artists
-		alert ( json.artists[artist].name + " :: " + json.artists[artist].dir );
+		//alert ( json.artists[artist].name + " :: " + json.artists[artist].dir );
 		//Name used to update DIV
 		//dir used to populate DIV
 		var lyricsFound = [];
+		var dir = "lyrics/" + json.artists[artist].dir;
 		$.ajax({
-			url : "lyrics/" + json.artists[artist].dir,
+			url : dir,
 			success : function (data){
 				$(data).find("a:contains(.txt)").each(function(){
 					var filename = this.href.replace(window.location.host, "").replace("http:///","");
 					alert(filename);
 					//lyricsFound.push(filename);
-				})
+				});
 			}
-			
 		});
 		// var outout = "";
 		// for ( lyric in lyricsFound ){
