@@ -5,7 +5,7 @@ var jqXHR = $.ajax({
 		var json = $.parseJSON(data);
 		alert (json.toString());
 	}
-})
+});
 
 //jQuery.get( url [, data ] [, success ] [, dataType ] ) 
 /*
