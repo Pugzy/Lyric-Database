@@ -16,20 +16,22 @@ function doStuffToJSON( json ){
 	}
 }
 
-//jQuery.get( url [, data ] [, success ] [, dataType ] ) 
+
 /*
+$(document).ready(function(){
+ var dir = “img/”;
+var fileextension=”.jpg”;
  $.ajax({
-                    url: "data.json",
-                    //force to handle it as text
-                    dataType: "text",
-                    success: function(data) {
-                        
-                        //data downloaded so we call parseJSON function 
-                        //and pass downloaded data
-                        var json = $.parseJSON(data);
-                        //now json variable contains data in json format
-                        //let's display a few items
-                        $('#results').html('Plugin name: ' + json.name + '<br />Author: ' + json.author.name);
-                    }
-                });
+ //This will retrieve the contents of the folder if the folder is configured as ‘browsable’
+url: dir,
+ success: function (data) {
+ //Lsit all png file names in the page
+ $(data).find(“a:contains(” + fileextension + “)”).each(function () {
+ var filename = this.href.replace(window.location.host, “”).replace(“http:///”,”");
+ $(“#view”).append($(“”));
+ });
+ }
+ });
+ })
 */
+//jQuery.get( url [, data ] [, success ] [, dataType ] ) 
