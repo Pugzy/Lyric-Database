@@ -14,18 +14,10 @@ function doStuffToJSON( json ){
 		//Name used to update DIV
 		//dir used to populate DIV
 		var dir = "lyrics/" + json.artists[artist].dir +"/";
-		alert (dir);
-		$.ajax({
-		  url: dir,
-		  success: function(data){
-		     $(data).find("a:contains(.txt)").each(function(){
-		        var images = $(this).attr("href");
-		
-		        $('<p></p>').html(images).appendTo('body')
-		
-		     });
-		  }
-		});
+		var songs = json.artists[artist].songs;
+		for (song in songs){
+			$("<li id=" + song + ">" + song + "</li>").append('#' + json.artists[artist].name);
+		}
 		// var outout = "";
 		// for ( lyric in lyricsFound ){
 		// 	outout += lyric;
