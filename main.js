@@ -16,7 +16,7 @@ function doStuffToJSON( json ){
 		var dir = "lyrics/" + json.artists[artist].dir +"/";
 		var songs = (json.artists[artist].songs);
 		for (song in songs){
-			alert (song);
+			$("<li>" + songs[song] + "</li>").append("#" + json.artists[artist].name);
 		}
 		// var outout = "";
 		// for ( lyric in lyricsFound ){
