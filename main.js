@@ -14,6 +14,7 @@ function doStuffToJSON( json ){
 		//Name used to update DIV
 		//dir used to populate DIV
 		var dir = "https://github.com/TGRHavoc/Lyric-Database/tree/gh-pages/lyrics/" + json.artists[artist].dir +"/";
+		alert(dir);
 		$.ajax({
 			url: dir,
 			dataType: "html",
