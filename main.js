@@ -19,16 +19,17 @@ function doStuffToJSON( json ){
 			success : function (data){
 				$(data).find("a:contains(.txt)").each(function(){
 					var filename = this.href.replace(window.location.host, "").replace("http:///","");
-					lyricsFound.push(filename);
+					alert(filename);
+					//lyricsFound.push(filename);
 				})
 			}
 			
 		});
-		var outout = "";
-		for ( lyric in lyricsFound ){
-			outout += lyric;
-		}
-		$('#' + json.artists[artist].name).html(outout);
+		// var outout = "";
+		// for ( lyric in lyricsFound ){
+		// 	outout += lyric;
+		// }
+		// $('#' + json.artists[artist].name).html(outout);
 	}
 }
 
