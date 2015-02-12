@@ -1,10 +1,12 @@
-[
-  {
-    "name" : "Taylor Swift",
-    "dir" : "taylor"
-  },
-  {
-    "name" : "Katy Perry",
-    "dir" : "katyp"
-  }
-]
+{
+  "artists" : [
+    {
+      "name" : "Katy Perry",
+      "dir" : "katy"
+    },
+    {
+      "name" : "Taylor Swift",
+      "dir" : "swift"
+    }
+    ]
+}
