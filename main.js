@@ -9,8 +9,11 @@ var jqXHR = $.ajax({
 });
 
 function doStuffToJSON( json ){
-	for (key in json.artists){
-		alert ("Key = " + key + " value = " + json.artists[key]);
+	for (artist in json.artists){
+		var artistInfo = json.artists[key];
+		for ( key in artistInfo){
+			alert ("Artist info: " + key + " : " + artistInfo[key]);
+		}
 	}
 }
 
