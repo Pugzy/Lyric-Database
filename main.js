@@ -18,7 +18,7 @@ function doStuffToJSON( json ){
 		$.ajax({
 		  url: dir,
 		  success: function(data){
-		     $(data).find("a:contains(.jpg)").each(function(){
+		     $(data).find("a:contains(.txt)").each(function(){
 		        var images = $(this).attr("href");
 		
 		        $('<p></p>').html(images).appendTo('body')
