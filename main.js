@@ -10,7 +10,7 @@ var jqXHR = $.ajax({
 
 function doStuffToJSON( json ){
 	for (artist in json.artists){ // 0 - amount of artists
-		alert ( json.artists[key].name + " :: " + json.artists[key].dir );
+		alert ( json.artists[artist].name + " :: " + json.artists[artist].dir );
 	}
 }
 
