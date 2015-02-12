@@ -13,6 +13,17 @@ function doStuffToJSON( json ){
 		alert ( json.artists[artist].name + " :: " + json.artists[artist].dir );
 		//Name used to update DIV
 		//dir used to populate DIV
+		var lyricsFound = [];
+		$.ajax({
+			url : "lyrics/" + json.artists[artist].name,
+			success : function (data){
+				$(data).find("a:contains(.txt)").each(function(){
+					var filename = this.href.replace(window.location.host, "").replace("http:///","");
+					lyricsFound.push(filename);
+				})
+			}
+			
+		});
 	}
 }
 
