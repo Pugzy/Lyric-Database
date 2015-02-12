@@ -13,6 +13,7 @@ function doStuffToJSON( json ){
 		//alert ( json.artists[artist].name + " :: " + json.artists[artist].dir );
 		//Name used to update DIV
 		//dir used to populate DIV
+		alert("Setting up..");
 		var dir = "https://github.com/TGRHavoc/Lyric-Database/tree/gh-pages/lyrics/" + json.artists[artist].dir +"/";
 		alert(dir);
 		$.ajax({
