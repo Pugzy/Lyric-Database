@@ -4,7 +4,7 @@ var jqXHR = $.ajax({
 	processData: false,
 	success: function(data){
 		var json = $.parseJSON(data);
-		soStuffToJSON (json);
+		doStuffToJSON (json);
 	}
 });
 
