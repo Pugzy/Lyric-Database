@@ -16,15 +16,15 @@ function doStuffToJSON( json ){
 		var dir = "lyrics/" + json.artists[artist].dir +"/";
 		alert (dir);
 		$.ajax({
-			url : dir,
-			success : function (data){
-				// $(data).find("a:contains(.txt)").each(function(){
-				// 	var filename = this.href.replace(window.location.host, "").replace("http:///","");
-				// 	alert(filename);
-				// 	//lyricsFound.push(filename);
-				// });
-				alert(data);
-			}
+		  url: dir,
+		  success: function(data){
+		     $(data).find("a:contains(.jpg)").each(function(){
+		        var images = $(this).attr("href");
+		
+		        $('<p></p>').html(images).appendTo('body')
+		
+		     });
+		  }
 		});
 		// var outout = "";
 		// for ( lyric in lyricsFound ){
