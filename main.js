@@ -18,11 +18,12 @@ function doStuffToJSON( json ){
 		$.ajax({
 			url : dir,
 			success : function (data){
-				$(data).find("a:contains(.txt)").each(function(){
-					var filename = this.href.replace(window.location.host, "").replace("http:///","");
-					alert(filename);
-					//lyricsFound.push(filename);
-				});
+				// $(data).find("a:contains(.txt)").each(function(){
+				// 	var filename = this.href.replace(window.location.host, "").replace("http:///","");
+				// 	alert(filename);
+				// 	//lyricsFound.push(filename);
+				// });
+				alert(data);
 			}
 		});
 		// var outout = "";
