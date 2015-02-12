@@ -8,6 +8,12 @@ var jqXHR = $.ajax({
 	}
 });
 
+function doStuffToJSON( json ){
+	for (var i=0; i< json.artists.size(); i++ ){
+		alert (json.artists[i].name);
+	}
+}
+
 //jQuery.get( url [, data ] [, success ] [, dataType ] ) 
 /*
  $.ajax({
