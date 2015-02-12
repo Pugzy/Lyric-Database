@@ -4,7 +4,7 @@ var jqXHR = $.ajax({
 	processData: false,
 	success: function(data){
 		var json = $.parseJSON(data);
-		alert (json.toString());
+		alert (json.artists[0].name);
 	}
 });
 
