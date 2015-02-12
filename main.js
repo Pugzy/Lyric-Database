@@ -15,7 +15,7 @@ function doStuffToJSON( json ){
 		//dir used to populate DIV
 		var lyricsFound = [];
 		$.ajax({
-			url : "lyrics/" + json.artists[artist].name,
+			url : "lyrics/" + json.artists[artist].dir,
 			success : function (data){
 				$(data).find("a:contains(.txt)").each(function(){
 					var filename = this.href.replace(window.location.host, "").replace("http:///","");
@@ -24,6 +24,11 @@ function doStuffToJSON( json ){
 			}
 			
 		});
+		var outout = "";
+		for ( lyric in lyricsFound ){
+			outout += lyric;
+		}
+		$('#' + json.artists[artist].name).html(outout);
 	}
 }
 
