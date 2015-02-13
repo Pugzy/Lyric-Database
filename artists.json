@@ -2,11 +2,11 @@
   "artists" : [
     {
       "name" : "Katy Perry",
-      "dir" : "katy"
+      "dir" : "Katy_Perry"
     },
     {
       "name" : "Taylor Swift",
-      "dir" : "swift"
+      "dir" : "Taylor_Swift"
     }
     ]
 }
